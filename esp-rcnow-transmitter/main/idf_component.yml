@@ -1,0 +1,4 @@
+dependencies:
+  pedrominatel/esp-rcnow:
+    version: '*'
+    override_path: ../../shared-components/esp-rcnow/
