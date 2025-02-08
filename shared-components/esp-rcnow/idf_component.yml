@@ -1,0 +1,21 @@
+version: 0.0.0
+targets:
+- esp32
+- esp32s2
+- esp32s3
+- esp32c3
+- esp32c2
+- esp32c6
+description: ESP-NOW Remote Control Receiver and Transmitter - "Pedro Minatel <pminatel@gmail.com>"
+tags:
+- esp-now
+dependencies:
+  idf: '>=5.1'
+
+  button:
+    version: ">=2.5,<4.0"
+    public: true
+
+  espressif/esp-now:
+    version: "^2.*"
+    public: true
