@@ -7,6 +7,6 @@ void app_main(void)
 {
 
     // Initialize NVS and ESP-NOW
-    esp_rcnow_init();
+    esp_rcnow_start();
 
 }
