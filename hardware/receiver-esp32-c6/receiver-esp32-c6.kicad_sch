@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "ESP32-C6 ESP-NOW Receiver")
-		(date "2025-02-08")
-		(rev "1.0")
+		(date "2025-04-18")
+		(rev "2.0")
 		(company "Pedro Minatel")
 	)
 	(lib_symbols
@@ -782,7 +782,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_02x03_Counter_Clockwise"
+		(symbol "Connector_Generic:Conn_02x03_Odd_Even"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -798,7 +798,7 @@
 					)
 				)
 			)
-			(property "Value" "Conn_02x03_Counter_Clockwise"
+			(property "Value" "Conn_02x03_Odd_Even"
 				(at 1.27 -5.08 0)
 				(effects
 					(font
@@ -824,7 +824,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, double row, 02x03, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -851,7 +851,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_02x03_Counter_Clockwise_1_1"
+			(symbol "Conn_02x03_Odd_Even_1_1"
 				(rectangle
 					(start -1.27 3.81)
 					(end 3.81 -3.81)
@@ -950,24 +950,6 @@
 				(pin passive line
 					(at -5.08 0 0)
 					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
 					(name "Pin_3"
 						(effects
 							(font
@@ -984,25 +966,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 2.54 180)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -1020,7 +984,25 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -2.54 180)
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -1030,6 +1012,24 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5120,6 +5120,19 @@
 			(type none)
 		)
 		(uuid fde6dbea-92cd-4200-83f1-cf05af5e8a59)
+	)
+	(text "ESP32-C6 ESP-RCNOW\nESP-NOW Receiver"
+		(exclude_from_sim no)
+		(at 178.054 171.45 0)
+		(effects
+			(font
+				(size 2.1336 2.1336)
+				(thickness 0.508)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "65af007e-3e59-454b-a03c-cfca863e3547")
 	)
 	(junction
 		(at 63.5 154.94)
@@ -10964,85 +10977,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x03_Counter_Clockwise")
-		(at 129.54 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "50b4e0a0-754c-4742-8f5e-1ca80bae8989")
-		(property "Reference" "J8"
-			(at 129.54 56.896 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x03_Counter_Clockwise"
-			(at 138.684 67.818 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Vertical_SMD"
-			(at 129.54 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 129.54 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x03, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 129.54 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c98f0505-9ef1-4b46-b1ce-aee49c763ea5")
-		)
-		(pin "2"
-			(uuid "41ddcc94-9d75-49a0-a383-b0b5f394df72")
-		)
-		(pin "3"
-			(uuid "56265e44-03a5-4699-ab06-104d6197f176")
-		)
-		(pin "4"
-			(uuid "41856f30-58e2-4a48-a14d-df0021cd6046")
-		)
-		(pin "5"
-			(uuid "68af281a-fa19-4c73-b90d-a93de294a814")
-		)
-		(pin "6"
-			(uuid "8ea2408c-a758-4c89-b0fc-3e00497a5ef7")
-		)
-		(instances
-			(project ""
-				(path "/74785fdf-749b-4c5e-87ad-0cd9c1365ade"
-					(reference "J8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Schottky")
 		(at 57.15 154.94 180)
 		(unit 1)
@@ -13094,6 +13028,86 @@
 			(project "receiver-esp32-c6"
 				(path "/74785fdf-749b-4c5e-87ad-0cd9c1365ade"
 					(reference "#PWR049")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
+		(at 129.54 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "83d83c88-1057-4500-b74c-fdb3c4634119")
+		(property "Reference" "J12"
+			(at 130.81 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x03_Odd_Even"
+			(at 130.81 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Vertical_SMD"
+			(at 129.54 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 129.54 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6a953089-abaf-443b-912f-b3c7593690f9")
+		)
+		(pin "3"
+			(uuid "f217ddd3-22a8-4815-a133-a0febf79b287")
+		)
+		(pin "5"
+			(uuid "eab3309a-321a-4a3b-8ead-c2020200aeca")
+		)
+		(pin "2"
+			(uuid "222ef326-bf6e-4e22-bcfa-d4b61e176e09")
+		)
+		(pin "4"
+			(uuid "60c34fcf-f64b-411c-826a-e4a227cd7eb4")
+		)
+		(pin "6"
+			(uuid "c04a30a1-c428-41ee-bb40-3094777cdf26")
+		)
+		(instances
+			(project ""
+				(path "/74785fdf-749b-4c5e-87ad-0cd9c1365ade"
+					(reference "J12")
 					(unit 1)
 				)
 			)
