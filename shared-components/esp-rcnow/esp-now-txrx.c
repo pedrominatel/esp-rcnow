@@ -35,7 +35,7 @@ static void espnow_bind_receiver(const uint8_t *mac_addr)
 
 static void app_wifi_init()
 {
-    esp_event_loop_create_default();
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
 
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
 
