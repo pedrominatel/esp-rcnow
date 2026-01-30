@@ -2,7 +2,8 @@
 *.o
 *.pyc
 *.zip
-
+*.lck
+*.kicad_prl
 # gtags
 GTAGS
 GRTAGS
