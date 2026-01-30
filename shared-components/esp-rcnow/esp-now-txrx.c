@@ -53,13 +53,17 @@ esp_err_t esp_rcnow_init(void)
     app_wifi_init();
 
     espnow_config_t espnow_config = ESPNOW_INIT_CONFIG_DEFAULT();
-    espnow_init(&espnow_config);
+    esp_err_t ret = espnow_init(&espnow_config);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "ESP-NOW initialization failed: %s", esp_err_to_name(ret));
+        return ret;
+    }
 
     ESP_LOGI(TAG, "ESP-NOW initialization complete");
     return ESP_OK;
 }
 
-esp_err_t esp_rcnow_denit(void)
+esp_err_t esp_rcnow_deinit(void)
 {
     return ESP_OK;
 }
