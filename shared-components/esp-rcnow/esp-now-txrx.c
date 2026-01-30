@@ -52,6 +52,8 @@ esp_err_t esp_rcnow_init(void)
     espnow_storage_init();
     app_wifi_init();
 
+    // Use manual error checking here (instead of ESP_ERROR_CHECK) to allow
+    // error propagation to caller rather than aborting the program
     espnow_config_t espnow_config = ESPNOW_INIT_CONFIG_DEFAULT();
     esp_err_t ret = espnow_init(&espnow_config);
     if (ret != ESP_OK) {
