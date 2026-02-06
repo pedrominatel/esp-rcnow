@@ -35,7 +35,7 @@ static void espnow_bind_receiver(const uint8_t *mac_addr)
 
 static void app_wifi_init()
 {
-    esp_event_loop_create_default();
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
 
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
 
@@ -52,14 +52,20 @@ esp_err_t esp_rcnow_init(void)
     espnow_storage_init();
     app_wifi_init();
 
+    // Use manual error checking here (instead of ESP_ERROR_CHECK) to allow
+    // error propagation to caller rather than aborting the program
     espnow_config_t espnow_config = ESPNOW_INIT_CONFIG_DEFAULT();
-    espnow_init(&espnow_config);
+    esp_err_t ret = espnow_init(&espnow_config);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "ESP-NOW initialization failed: %s", esp_err_to_name(ret));
+        return ret;
+    }
 
     ESP_LOGI(TAG, "ESP-NOW initialization complete");
     return ESP_OK;
 }
 
-esp_err_t esp_rcnow_denit(void)
+esp_err_t esp_rcnow_deinit(void)
 {
     return ESP_OK;
 }
